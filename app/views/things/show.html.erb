@@ -3,6 +3,7 @@
 <%= link_to "Back to Things", things_url %>
 
     <h3> Photo Title: <%= @thing.title %></h3>
-    <p> <%= link_to "Edit Thing", edit_thing_url(@thing.id) %></p>
+    <p> <%= link_to "Edit Thing", edit_thing_url(@thing.id) %>
+        <%= link_to "Delete Thing", delete_thing_path(@thing), method: :delete, data: {confirm: "Are you sure you want to delete this thing?"} %></p>
     <img src="<%= @thing.url %>">
     <p> Description: <%= @thing.description %></p>
