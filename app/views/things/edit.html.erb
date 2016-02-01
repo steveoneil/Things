@@ -1,0 +1,22 @@
+<h1> Edit your Thing! </h1>
+
+<%= link_to "Back to Things", things_url %>
+
+<%= form_for @thing do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </p>
+<img src="<%= @thing.url %>">
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>

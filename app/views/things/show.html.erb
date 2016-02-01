@@ -1,0 +1,8 @@
+<h1> Show specific Thing</h1>
+
+<%= link_to "Back to Things", things_url %>
+
+    <h3> Photo Title: <%= @thing.title %></h3>
+    <p> <%= link_to "Edit Thing", edit_thing_url(@thing.id) %></p>
+    <img src="<%= @thing.url %>">
+    <p> Description: <%= @thing.description %></p>

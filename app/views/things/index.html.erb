@@ -1,0 +1,11 @@
+<h1> Inventory of "Things"</h1>
+
+<%= link_to "Add new Thing", new_thing_url %>
+
+  <% @things.each do |thing| %>
+    <h3> Photo Title: <%= thing.title %></h3>
+    <%= link_to image_tag(thing.url), thing_url(thing.id) %>
+    <p> Description: <%= thing.description %></p>
+    <br>
+    <br>
+  <% end %>
